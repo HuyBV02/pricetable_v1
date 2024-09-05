@@ -1,5 +1,7 @@
 html {
     background-color: #dfe5e8;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
@@ -24,7 +26,7 @@ html {
     margin-top: 30px;
 }
 
-.price-circle {
+.card .card__price {
     background-color: white;
     border-radius: 50%;
     width: 120px;
@@ -40,7 +42,13 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     z-index: 50;
+}
+
+.card:nth-child(2) .card__price {
+    z-index: 50;
+    background-color: #2c2e3d;
 }
 
 .price {
@@ -48,26 +56,17 @@ html {
     font-size: 32px;
     line-height: 37px;
     font-weight: 300;
-    font-family: "Source Sans Pro";
+    font-family: "Source Sans 3", sans-serif;
     text-align: center;
+    margin-bottom: -5px;
 }
 
-.price-3 {
-    font-size: 32px;
-    line-height: 37px;
+.card:nth-child(3) .price {
     color: #32ad1e;
-    font-weight: 300;
-    font-family: "Source Sans Pro";
-    text-align: center;
 }
 
-.price-mid {
-    font-size: 32px;
-    line-height: 37px;
+.card:nth-child(2) .price {
     color: #d74498;
-    font-weight: 300;
-    font-family: "Source Sans Pro";
-    text-align: center;
 }
 
 .per-tour {
@@ -75,41 +74,12 @@ html {
     line-height: 25px;
     color: #99a9b5;
     font-weight: 400;
-    font-family: "Source Sans Pro";
-    text-align: center;
-}
-
-.per-tour-mid {
-    font-size: 16px;
-    line-height: 25px;
-    color: #99a9b5;
-    font-weight: 400;
-    font-family: "Source Sans Pro";
-    text-align: center;
-}
-
-.price-circle-mid {
-    z-index: 50;
-    background-color: #2c2e3d;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    line-height: 30px;
-    font-size: 18px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(40, 40, 40, 0.1);
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: "Source Sans 3", sans-serif;
+    margin-bottom: 30px;
 }
 
 .card-header {
     height: 272px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,7 +94,7 @@ html {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 300;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     z-index: 100;
 }
 
@@ -143,10 +113,11 @@ html {
     line-height: 25px;
     color: #b6c6c9;
     font-weight: 300;
-    font-family: "Source Sans Pro";
+    font-family: "Source Sans 3", sans-serif;
+
     text-transform: none;
     z-index: 100;
-    margin-top: -20px;
+    margin-top: -15px;
 }
 
 .forest {
@@ -168,7 +139,7 @@ html {
 }
 
 /* list */
-#list {
+.list {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 100%;
@@ -178,7 +149,7 @@ html {
     line-height: 37px;
     color: #5f727f;
     font-weight: 300;
-    font-family: "Source Sans Pro";
+    font-family: "Source Sans 3", sans-serif;
 }
 
 ul {
@@ -202,20 +173,22 @@ li:nth-child(odd) {
     line-height: 37px;
     color: #5f727f;
     font-weight: 300;
-    font-family: "Source Sans Pro";
+    font-family: "Source Sans 3", sans-serif;
+
     text-align: center;
     z-index: 1000;
 }
 
 .subtitle-second {
     font-size: 13px;
-    margin-top: -15px;
+    margin-top: -20px;
     margin-bottom: 30px;
     font-size: 14px;
     line-height: 25px;
     color: #99a9b5;
     font-weight: 400;
-    font-family: "Source Sans Pro";
+    font-family: "Source Sans 3", sans-serif;
+
     text-align: center;
 }
 
@@ -224,7 +197,6 @@ li:nth-child(odd) {
     background-color: #ffffff;
     border: solid 1px #2196f7;
     padding: 16px 16px;
-    border-radius: 5px;
     width: 50%;
     margin-top: 20px;
     margin-left: 25%;
@@ -235,58 +207,39 @@ li:nth-child(odd) {
 .btn:hover {
     color: #ffffff;
     background-color: #2196f7;
-    border: none;
     padding: 16px 16px;
-    border-radius: 5px;
     width: 50%;
     margin-top: 20px;
     margin-left: 25%;
     margin-bottom: 20px;
 }
 
-.btn-3 {
+.card:nth-child(3) .btn {
     color: #32ad1e;
     background-color: #ffffff;
     border: solid 1px #32ad1e;
-    padding: 16px 16px;
-    border-radius: 5px;
-    width: 50%;
-    margin-top: 20px;
-    margin-left: 25%;
-    margin-bottom: 20px;
-    cursor: pointer;
 }
 
-.btn-3:hover {
+.card:nth-child(3) .btn:hover {
     color: #ffffff;
     background-color: #32ad1e;
-    border: none;
     padding: 16px 16px;
-    border-radius: 5px;
     width: 50%;
     margin-top: 20px;
     margin-left: 25%;
     margin-bottom: 20px;
 }
 
-.btn-mid {
+.card:nth-child(2) .btn {
     background-color: #ffffff;
     color: #d74498;
     border: solid 1px #d74498;
-    padding: 16px 16px;
-    border-radius: 5px;
-    width: 50%;
-    margin-top: 20px;
-    margin-left: 25%;
-    margin-bottom: 20px;
 }
 
-.btn-mid:hover {
+.card:nth-child(2) .btn:hover {
     color: rgb(255, 255, 255);
     background-color: #d74498;
     padding: 16px 16px;
-    border-radius: 5px;
-    border: none;
     width: 50%;
     margin-top: 20px;
     margin-left: 25%;
@@ -310,7 +263,7 @@ li:nth-child(odd) {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
-    font-family: "Montserrat";
+    font-family: "Montserrat", sans-serif;
     text-align: center;
     z-index: 50;
 }
